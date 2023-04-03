@@ -4,9 +4,9 @@ h1 {
 
 .square {
   aspect-ratio: 1/1;
-  width: 200px;
+  width: 100%;
   border: 1px solid black;
-  font-size: 10rem;
+  font-size: clamp(1rem, 20vw, 10rem);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +15,10 @@ h1 {
 
 .board {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
 }

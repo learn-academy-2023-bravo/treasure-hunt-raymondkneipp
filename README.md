@@ -17,6 +17,13 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
   - style square
 
 - As a user, when I click on one of the question marks an alert appears with the index position of that question mark in the array.
+  - *branch:* index-position
+  - added onClick to square
+  - added handleClick method to Square.js
+  - pass index to Square and handleClick
+  - added handleGamePlay to App.js
+  - passed handleGamePlay to Square to get index by using functional props
+
 - As a user, when I click on one of the question marks instead of the alert the question mark turns into a tree emoji.
 - As a user, if I select the winning square the question mark will become a treasure emoji and if I select the losing square the question mark will become a bomb emoji.
 - As a user, I can click on a “Play Again” button that will restart the game.
