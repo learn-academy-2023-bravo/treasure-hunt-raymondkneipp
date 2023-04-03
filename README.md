@@ -43,6 +43,12 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
   - create handleRestart function to reset board and set treasure and bomb to random location
 
 - As a user, I can see a counter that shows how many guesses I have left. The counter starts at five and decrements one every time I click on a square that is not the treasure nor the bomb.
+  - *branch:* counter
+  - create counter component and call in app
+  - counter component takes value prop
+  - app useState to store counter (init to 5)
+  - when game is reset, set counter to 5
+
 - As a user, I can see a message informing me that I won the game if I select the square that contains the treasure.
 - As a user, I can see a message informing me that I lost the game if I select the square that contains the bomb.
 - As a user, I cannot continue to play the game after I win or lose.
