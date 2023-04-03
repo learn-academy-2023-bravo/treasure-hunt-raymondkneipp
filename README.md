@@ -25,6 +25,8 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
   - passed handleGamePlay to Square to get index by using functional props
 
 - As a user, when I click on one of the question marks instead of the alert the question mark turns into a tree emoji.
+  - *branch:* tree-emoji
+
 - As a user, if I select the winning square the question mark will become a treasure emoji and if I select the losing square the question mark will become a bomb emoji.
 - As a user, I can click on a “Play Again” button that will restart the game.
 - As a user, I can see a counter that shows how many guesses I have left. The counter starts at five and decrements one every time I click on a square that is not the treasure nor the bomb.
