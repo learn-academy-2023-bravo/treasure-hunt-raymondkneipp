@@ -17,9 +17,25 @@ const App = () => {
 
   const handleGamePlay = (clickedSquare) => {
     let updateBoard = [...board]
-    updateBoard[clickedSquare] = '🌳'
+
+    if (clickedSquare === treasureLocation) {
+      updateBoard[clickedSquare] = '💰'
+    } else if (clickedSquare === bombLocation) {
+      updateBoard[clickedSquare] = '💣'
+    } else {
+      updateBoard[clickedSquare] = '🌳'
+    }
+
     setBoard(updateBoard)
   }
+
+  const randomBoardLocation = (exclude = board.length) => {
+    let result = Math.floor(Math.random() * board.length)
+    return (result === exclude) ? randomBoardLocation(exclude) : result
+  }
+
+  const [treasureLocation, setTreasureLocation] = useState(randomBoardLocation())
+  const [bombLocation, setBombLocation] = useState(randomBoardLocation(treasureLocation))
 
   return (
     <>
