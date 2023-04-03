@@ -22,3 +22,15 @@ h1 {
   margin: 0 auto;
   padding: 1rem;
 }
+
+.btn {
+  border: none;
+}
+
+.btn--restart {
+  font-size: 1rem;
+  background-color: red;
+  color: white;
+  margin: 0 auto;
+  display: block;
+}

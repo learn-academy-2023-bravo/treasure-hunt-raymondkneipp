@@ -2,18 +2,20 @@ import React, { useState } from "react"
 import "./App.css"
 import Square from "./components/Square"
 
+const initialBoard = [
+  "?",
+  "?",
+  "?",
+  "?",
+  "?",
+  "?",
+  "?",
+  "?",
+  "?"
+]
+
 const App = () => {
-  const [board, setBoard] = useState([
-    "?",
-    "?",
-    "?",
-    "?",
-    "?",
-    "?",
-    "?",
-    "?",
-    "?"
-  ])
+  const [board, setBoard] = useState(initialBoard)
 
   const handleGamePlay = (clickedSquare) => {
     let updateBoard = [...board]
@@ -37,6 +39,12 @@ const App = () => {
   const [treasureLocation, setTreasureLocation] = useState(randomBoardLocation())
   const [bombLocation, setBombLocation] = useState(randomBoardLocation(treasureLocation))
 
+  const handleRestart = () => {
+    setBoard(initialBoard)
+    setTreasureLocation(randomBoardLocation())
+    setBombLocation(randomBoardLocation(treasureLocation))
+  }
+
   return (
     <>
       <h1>Treasure Hunt Game</h1>
@@ -50,6 +58,7 @@ const App = () => {
           />
         ))}
       </div>
+      <button onClick={handleRestart} className='btn btn--restart'>Restart</button>
     </>
   )
 }
