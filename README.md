@@ -26,8 +26,17 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
 
 - As a user, when I click on one of the question marks instead of the alert the question mark turns into a tree emoji.
   - *branch:* tree-emoji
+  - made a copy of board using spread operator
+  - updated the value of the square at index to be a tree
+  - `CTRL + CMD + Space` to open emojis
 
 - As a user, if I select the winning square the question mark will become a treasure emoji and if I select the losing square the question mark will become a bomb emoji.
+  - *branch:* treasure-bomb
+  - store treasureLocation in useState and set to random index of board
+  - store bombLocation in useState and set to random index of board
+  - created function to exclude number from random number generator to ensure treasure and bomb are not in same location
+  - if user clicks on treasure or bomb update emoji accordingly
+
 - As a user, I can click on a “Play Again” button that will restart the game.
 - As a user, I can see a counter that shows how many guesses I have left. The counter starts at five and decrements one every time I click on a square that is not the treasure nor the bomb.
 - As a user, I can see a message informing me that I won the game if I select the square that contains the treasure.
