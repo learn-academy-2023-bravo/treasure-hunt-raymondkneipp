@@ -7,7 +7,7 @@ const Square = ({ square, index, handleGamePlay }) => {
 
   return (
     <>
-      <div className="square" onClick={handleClick}>{square}</div>
+      <button className="square btn" onClick={handleClick}>{square}</button>
     </>
   )
 }
